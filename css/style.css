@@ -1,0 +1,274 @@
+/* Estilo base para la página*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* Estilo para el cuerpo de la página*/
+body{
+    font-family: 'Inter', sans-serif; 
+    background-color: #121212;
+    color: #F5F5F5;
+}
+/* agregamos color y la separacion del header*/
+header{
+    background-color:#1A1A1A;
+    padding: 20px 40px;
+}
+/* Damos medidas al logo*/
+.logo{
+    height: 100px;
+    width: auto;
+}
+/* Agregamos color y espacio a la barra de navegación*/
+nav{
+    background-color: #1A1A1A;
+    padding: 10px 40px;
+}
+/* Ponemos el menú en fila y quitamos los puntos de la lista*/
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+/* Estilo de los enlaces del menú*/
+nav a{
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+/* Color de los enlaces del menú al pasar el mouse*/
+nav a:hover{
+    color: #D4FF00;
+}
+/* Resaltamos la página en la que estamos actualmente*/
+.activo{
+    color:#D4FF00;
+    font-weight: 700;
+    border-bottom: 2px solid #D4FF00;
+}
+/* Espacio general para todas las secciones*/
+section{
+    padding: 60px 40px;
+}
+/* Sección hero: imagen de fondo con capa oscura y texto centrado*/
+.hero{
+    text-align: center;
+    padding: 120px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/fondoimagen.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Título grande del hero*/
+.hero h2{
+    font-family: 'poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+/* Texto pequeño destacado arriba del título del hero*/
+.hero-slogan {
+    color: #D4FF00;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+/* Botón principal usado en varias partes del sitio*/
+.boton{
+    display: inline-block;
+    background-color: #D4FF00;
+    color: #121212;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+/* Color del botón al pasar el mouse*/
+.boton:hover{
+    background-color:#B8E600;
+}
+/* Cuadrícula usada para mostrar imágenes en grupos de 3 columnas*/
+.galeria{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/* Título de cada sección con galería, ocupa toda la fila*/
+.galeria h2{
+    grid-column: 1/-1;
+    font-family: 'poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+/* Todas las imágenes de la galería miden lo mismo*/
+.galeria img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+/* Estilo y separación del pie de página*/
+footer{
+    background-color: #1A1A1A;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+/* Redes sociales del footer en fila y centradas*/
+footer ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+/* Estilo de los enlaces del footer*/
+footer a{
+    text-decoration: none;
+    color: #F5F5F5;
+    transition: color 0.3s;
+}
+/* Color de los enlaces del footer al pasar el mouse*/
+footer a:hover{
+    color: #D4FF00;
+}
+/* Estilo de la dirección y el aviso legal*/
+footer p{
+    font-size: 0.9rem;
+    color: #B3B3B3;
+    margin-top: 5px;
+}
+/* Evita espacio extra debajo de los íconos SVG*/
+footer svg{
+    display: block;
+}
+/* Fila de botones de filtro por categoría*/
+.filtros{
+    display: flex;
+    padding: 40px 40px 20px 40px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+/* Estilo de cada botón de filtro sin seleccionar*/
+.filtro{
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #F5F5F5;
+    padding: 10px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s;
+}
+/* Color del filtro al pasar el mouse*/
+.filtro:hover{
+    border-color: #D4FF00;
+    color: #D4FF00;
+}
+/* Estilo del filtro que está seleccionado actualmente*/
+.filtro.activo{
+    background-color: #D4FF00;
+    color: #121212;
+    border: 1px solid #D4FF00;
+    font-weight: 600;
+}
+/* Título principal de la página de productos*/
+.subtitulo{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    padding-left: 30px;
+}
+/* Tarjeta de cada producto en la galería*/
+.producto{
+    background-color: #1A1A1A;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+/* La imagen del producto se muestra completa, sin recortarse*/
+.producto img{
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: #0D0D0D;
+}
+/* Nombre del producto*/
+.producto h3{
+    margin: 15px 0 5px 0; 
+    font-size: 1rem;
+}
+/* Precio del producto, destacado en color neón*/
+.precio{
+    color: #D4FF00;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* Formulario de presupuesto, centrado y en columna*/
+form{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 20px;
+}
+/* Estilo de los campos de texto del formulario*/
+input, textarea{
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+    font-family: 'Inter', sans-serif;
+}
+/* Estilo de las etiquetas de cada campo*/
+label{
+    font-weight: 600;
+    margin-bottom: -10px;
+    font-size: 0.9rem;
+}
+/* Alineación del checkbox y su texto de política de privacidad*/
+.check-label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+/* Color del enlace a la política de privacidad*/
+.check-label a{
+    color:#D4FF00;
+}
+/* Sección de contacto: mapa y datos en fila*/
+.contacto{
+    display: flex;
+    gap:40px;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+}
+/* El mapa ocupa todo el ancho de su columna*/
+.mapa iframe{
+    width: 100%;
+    border-radius: 8px;
+}
+/* Los datos de contacto ocupan el espacio restante*/
+.datos-contacto{
+    flex: 1;
+}
+/* Título de la sección de datos de contacto*/
+.datos-contacto h2{
+    font-family: 'poppins', sans-serif;
+    color: #D4FF00;
+    margin-bottom: 20px;
+}
+/* Espaciado entre los párrafos de datos de contacto*/
+.datos-contacto p{
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
